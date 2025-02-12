@@ -54,19 +54,18 @@
         }
         if (isset($_POST["latePay"])) {
             $nracharges3 = 'Late Payment (30% of the Energy Charge)<br>';
-            $nrachargesMath += $nraenergyCharge * (10/3);
+            $nrachargesMath += $nraenergyChargeInit * .3;
         }
-        if (isset($_POST["meterAdd"])) {
+        if (isset($_POST["MeterAdd"])) {
             $nracharges4 ='Additional Electricity Meter (Php 750.00)<br>';
             $nrachargesMath += 750;
         }
-        if (isset($_POST["meterTrans"])) {
+        if (isset($_POST["MeterTrans"])) {
             $nracharges5 = 'Electricity Meter Transfer (Php 1,500.00)<br>';
             $nrachargesMath += 1500;
         }
 
     
-
 
 
        $nrafullN = $nraln.", ".$nrafn." ".$nrami.".";
@@ -97,13 +96,13 @@
             <div class="col-8 bg-light p-5">
                 <p>Customer Name: <?php echo $nrafullN ?></p>
                 <p>Address: <?php echo $nrafullAdd?></p>
-                <p>No. of Kilowatt <?php echo $nrakw ?></p>
+                <p>No. of Kilowatt: <?php echo $nrakw ?></p>
                 <p>Subscription Type: <?php echo $nrasubType?></p>
                 <p>Rate of Subscription: <?php echo $nrasubRate?></p>
-                <p>Energy Charge: Php<?php echo $nraenergyCharge?></p>
-                <p>Other Charges: <?php echo $nracharges1.$nracharges2.$nracharges3.$nracharges4.$nracharges5?></p>
-                <p>Total Other Charges/Fees<?php $nrachargesMath?></p>
-                <p>Total Electricity Bill<?php $nratotalEnergy?></p>
+                <p>Energy Charge: Php <?php echo $nraenergyCharge?></p>
+                <p>Other Charges: <br> <?php echo $nracharges1.$nracharges2.$nracharges3.$nracharges4.$nracharges5?></p>
+                <p>Total Other Charges/Fees: <?php echo $nrachargesMath?></p>
+                <p>Total Electricity Bill: <?php echo $nratotalEnergy?></p>
             </div>
         </div>
     </div>
