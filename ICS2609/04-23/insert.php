@@ -171,9 +171,6 @@ if (isset($_POST['sub'])) {
     $imagepath = "nra_images/".basename($_FILES['upload_img']['name']);
     move_uploaded_file($_FILES['upload_img']['tmp_name'],$imagepath);
     // var_dump($_FILES['upload_img']['name']);
-
-
-
 // query to insert
 $nrainsertsql = "INSERT INTO tbl_accountdetails(fname, lname, gender, address, email, phone_num, addinfo, username, password, account_type, img_path)
               VALUES('$nrafirst','$nralast','$nragender','$nraadd','$nraemail', $nracontact, '$nraaddinfo', '$nrausername', '$nrapassword', '$nrarole', '$imagepath')";
