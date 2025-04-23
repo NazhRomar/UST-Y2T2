@@ -42,7 +42,7 @@
 
     // DISPLAY ALL FIRST
     else{
-    $nraselectsql = "SELECT * from tbl_accountdetails"; // eto gagalawin pag search (order by account_id etc.)
+    $nraselectsql = "SELECT * from tbl_accountdetails"; 
     $nrasearchInput = NULL;
 }
 
